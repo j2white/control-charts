@@ -122,7 +122,7 @@ def email_results(run='y'):
 	from email.mime.text import MIMEText
 	from email.mime.image import MIMEImage
 
-	attachment = 'SIU_Ref_Control_Chart.png'
+	attachment = 'Ref_Control_Chart.png'
 	sender = """ first.last@gmail.com """
 	distro_list = """ first.las@gmail.com, person.one@gmail.com, person.two@gmail """
 
