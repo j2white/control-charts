@@ -1,1 +1,1 @@
-# control-charts
+# control-chart
