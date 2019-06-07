@@ -7,6 +7,16 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import cx_Oracle
 
+def win_lin():
+    # Test if you are on Windows or Linux
+    import sys
+    if sys.platform == 'win32':
+    	cur.close()
+    	con.close()
+        raise SystemExit
+    else:
+        pass
+
 connect to the database
 with cx_Oracle.connect('userid/pass@domain') as con:
     con.autocommit = True
@@ -117,6 +127,7 @@ The upper control limit is: {u}.
 message = mess_base.format(c=c.head(1)[0],m=m.head(1)[0],st=s.head(1)[0],l=l.head(1)[0],u=u.head(1)[0])
 
 def email_results(run='y'):
+	win_lin()
 	import smtplib
 	from email.mime.multipart import MIMEMultipart
 	from email.mime.text import MIMEText
